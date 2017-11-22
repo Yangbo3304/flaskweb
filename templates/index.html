@@ -1,1 +1,11 @@
-<h1>坐飞机时离开房间1是咖啡</h1>
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Flasky - index{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello, {% if name %}{{name}}{% else %}Stranger{% endif %}</h1>
+</div>
+{{wtf.quick_form(form)}}
+{% endblock %}
