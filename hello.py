@@ -26,9 +26,6 @@ db = SQLAlchemy(app)
 
 
 class NameForm(Form):
-    def __init__(self):
-        pass
-
     name = StringField("what is your name?", validators=[DataRequired()])
     submit = SubmitField('Submit')
 
